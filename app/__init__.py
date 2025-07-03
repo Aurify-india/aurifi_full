@@ -73,7 +73,6 @@ def create_app():
     app.register_blueprint(transaction_dataset_bp, url_prefix='/api/v1/transaction_dataset')
     app.register_blueprint(archive_transaction_bp, url_prefix='/api/v1/archive_transaction')
 
-
     # Log registered URLs for debugging
     logger.info("Registered URLs:")
     for rule in app.url_map.iter_rules():
