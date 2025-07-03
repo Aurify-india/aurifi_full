@@ -26,7 +26,8 @@
 	// Use $effect to react to changes in the store
 	$effect(() => {
 		if (!breakDownBar.isBreakDownBarVisible && breakdownTransactionID.transaction_id) {
-			fetchData(breakdownTransactionID.transaction_id);
+			fetchData(breakdownTransactionID.transaction_id); 
+			
 		}
 	});
 
