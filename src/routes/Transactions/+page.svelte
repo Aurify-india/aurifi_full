@@ -39,7 +39,8 @@
 		try {
 			console.log('fetching files');
 			isloading = true;
-			const response = await fetch(`${VITE_API_URL}/transaction/get_all_transactions/${user_id}`);
+			// const response = await fetch(`${VITE_API_URL}/transaction/get_all_transactions/${user_id}`);
+			const response = await fetch(`http://139.59.26.29/transaction/get_all_transactions/${user_id}`);
 			if (!response.ok) {
 				console.error('Response not OK:', response.status, response.statusText);
 				files = [];
