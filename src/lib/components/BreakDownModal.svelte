@@ -30,6 +30,8 @@
 		}
 	});
 
+	
+
 	async function fetchData(transaction_id: string) {
 		try {
 			const response = await fetch(
