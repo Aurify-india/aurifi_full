@@ -27,7 +27,6 @@
 	$effect(() => {
 		if (!breakDownBar.isBreakDownBarVisible && breakdownTransactionID.transaction_id) {
 			fetchData(breakdownTransactionID.transaction_id); 
-			
 		}
 	});
 
