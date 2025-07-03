@@ -70,4 +70,4 @@ jobs:
           echo "📊 Checking service status..."
           docker compose ps
           
-          echo "✅ Frontend deployed successfully!"
+          echo "✅ Frontend deployed successfully!"
