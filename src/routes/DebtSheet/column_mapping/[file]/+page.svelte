@@ -77,7 +77,7 @@
 				const match = mappingData.gpt_response?.find((r) => r.matchedColumn === col) || null;
 				mappings[col] = match && match.confidence !== '0%' ? match.systemColumn : '';
 			});
-			
+
 			updateUnmappedMandatoryCount();
 		} catch (error) {
 			console.error('Error fetching data:', error);
@@ -272,14 +272,14 @@
 	}
 </script>
 
-<div classean="flex w-full flex-col pb-8">
+<div class="flex w-full flex-col pb-8">
 	<div class="flex w-full items-center gap-4 px-16 pt-14">
 		<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path
-				d="M20.4338 8.69904C20.4333 8.69858 20.4329 8.69812 20.4324 8.69766L11.866 0.539551C11.5009 0.19165 11.0154 0 10.4991 0C9.98268 0 9.49722 0.191498 9.13193 0.539398L0.570075 8.69339C0.567191 8.69614 0.564307 8.69904 0.561423 8.70178C-0.188394 9.42001 -0.187112 10.5853 0.565108 11.3017C0.908774 11.6292 1.36267 11.8188 1.84797 11.8387C1.86767 11.8405 1.88754 11.8414 1.90757 11.8414H2.24899V17.8453C2.24899 19.0334 3.26397 20 4.51174 20H7.86317C bust="0" fill-rule="evenodd" stroke="none" transform="translate(0 0) scale(1 1)">
-<path d="M7 2h7v2H7zM7 4h7v2H7zM7 6h7v2H7zM7 8h7v2H7zM7 10h7v2H7zM7 12h7v2H7zM7 14h7v2H7zM7 16h7v2H7zM7 18h7v2H7z" fill="#000"/>
-</path>
-			</svg>
+				d="M20.4338 8.69904C20.4333 8.69858 20.4329 8.69812 20.4324 8.69766L11.866 0.539551C11.5009 0.19165 11.0154 0 10.4991 0C9.98268 0 9.49722 0.191498 9.13193 0.539398L0.570075 8.69339C0.567191 8.69614 0.564307 8.69904 0.561423 8.70178C-0.188394 9.42001 -0.187112 10.5853 0.565108 11.3017C0.908774 11.6292 1.36267 11.8188 1.84797 11.8387C1.86767 11.8405 1.88754 11.8414 1.90757 11.8414H2.24899V17.8453C2.24899 19.0334 3.26397 20 4.51174 20H7.86317C8.20283 20 8.4784 19.7377 8.4784 19.4141V14.707C8.4784 14.1649 8.94143 13.7239 9.51068 13.7239H11.4874C12.0567 13.7239 12.5197 14.1649 12.5197 14.707V19.4141C12.5197 19.7377 12.7951 20 13.135 20H16.4864C17.7342 20 18.7491 19.0334 18.7491 17.8453V11.8414H19.0657C19.5819 11.8414 20.0674 11.6499 20.4329 11.302C21.1859 10.5844 21.1862 9.41711 20.4338 8.69904Z"
+				fill="#242C3E"
+			/>
+		</svg>
 		<h1 class="text-xl font-semibold">{currentFile}</h1>
 	</div>
 
@@ -287,7 +287,6 @@
 		<BreadCrumb />
 		<div class="relative flex h-full flex-col gap-2 px-4">
 			<h2 class="font-semibold">Column Mapping</h2>
-		
 
 			<span class="flex items-center gap-12 pb-6 font-normal">
 				{#if unmappedMandatoryCount > 0}
@@ -357,7 +356,7 @@
 														onmousedown={() => selectSuggestion(index, suggestion)}
 													>
 														{suggestion.column_name}
-														{#if systemColumns.find(col => col.column_name === suggestion.column_name)?.general_mandatory}
+														{#if systemColumns.find((col) => col.column_name === suggestion.column_name)?.general_mandatory}
 															<span class="text-red-500">*</span>
 														{/if}
 													</li>
