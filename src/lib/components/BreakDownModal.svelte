@@ -109,7 +109,7 @@
 	bind:hidden={breakDownBar.isBreakDownBarVisible}
 	id="sidebar3"
 	position="absolute"
-	class="right-0 start-[1p] w-96"
+	class="right-0 start-[1p] w-[30%]"
 >
 	<div class="flex items-center">
 		<h5
