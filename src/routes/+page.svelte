@@ -227,7 +227,7 @@
 					header_mapping: '/DebtSheet/column_mapping',
 					datatype_conversion: '/DebtSheet/data_validation',
 					select_tags: '/DebtSheet/Tagging',
-					apply_rules: '/DebtSheet/Tagging',
+					apply_rules: '/DebtSheet/retagged_items',
 					completed: '/DebtSheet/file_overview'
 				};
 
