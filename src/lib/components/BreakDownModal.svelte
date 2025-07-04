@@ -114,7 +114,7 @@
 	<div class="flex items-center">
 		<h5
 			id="drawer-navigation-label-3"
-			class="text-base text-xl font-semibold text-black dark:text-gray-400"
+			class="text-base font-semibold text-black dark:text-gray-400"
 		>
 			<span>BreakDown</span>
 		</h5>

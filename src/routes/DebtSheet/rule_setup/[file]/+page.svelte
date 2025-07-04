@@ -529,7 +529,10 @@
 								</Checkbox>
 							</div>
 							<div class="flex items-center text-[13px] font-semibold text-[#242C3E]">
-								No of Loans: {tagInfo.number_of_rows}
+								<span class="flex-col items-center justify-center gap-2">
+									<h2>No of Loans: {tagInfo.number_of_rows}</h2>
+									<h2>{tagInfo.loan_amount_total}/-</h2>
+								</span>
 							</div>
 						</div>
 						<div class="flex h-full w-[35%] flex-col justify-center gap-2">
