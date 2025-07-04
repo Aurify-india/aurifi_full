@@ -111,13 +111,6 @@
 	position="absolute"
 	class="right-0 start-[1p] w-96"
 >
-	{#if isLoading}
-		<div class="absolute inset-0 z-30 flex h-full w-full items-center justify-center">
-			<div
-				class="z-40 h-8 w-8 animate-spin rounded-full border-4 border-blue-500 border-t-transparent"
-			></div>
-		</div>
-	{/if}
 	<div class="flex items-center">
 		<h5
 			id="drawer-navigation-label-3"
@@ -138,30 +131,39 @@
 		<SidebarWrapper divClass="overflow-y-auto py-4 px-3 rounded-sm dark:bg-gray-800">
 			<SidebarGroup>
 				<Timeline order="vertical">
-					{#each data as step}
-						<TimelineItem title={step.step_name} date={step.date}>
-							{#snippet orientationSlot()}
-								<span
-									class="bg-primary-200 dark:bg-primary-900 absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full ring-8 ring-white dark:ring-gray-900"
-								>
-									<CalendarWeekSolid class="text-primary-600 dark:text-primary-400 h-4 w-4" />
-								</span>
-							{/snippet}
-							<p class="mb-2 text-base font-normal text-gray-500 dark:text-gray-400">
-								{step.description}
-							</p>
-							<div class="flex items-center gap-4 text-sm font-semibold text-blue-700">
-								<button onclick={() => downloadFile(summary.base_file_path)} class="cursor-pointer"
-									>Original File</button
-								>
-								<button onclick={() => downloadFile(step.file_path)} class="cursor-pointer"
-									>Final File</button
-								>
-							</div>
-						</TimelineItem>
+					{#if isLoading}
+						<div class="absolute inset-0 z-30 flex h-full w-full items-center justify-center">
+							<div
+								class="z-40 h-8 w-8 animate-spin rounded-full border-4 border-blue-500 border-t-transparent"
+							></div>
+						</div>
 					{:else}
-						<p class="text-gray-500">No data available</p>
-					{/each}
+						{#each data as step}
+							<TimelineItem title={step.step_name} date={step.date}>
+								{#snippet orientationSlot()}
+									<span
+										class="bg-primary-200 dark:bg-primary-900 absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full ring-8 ring-white dark:ring-gray-900"
+									>
+										<CalendarWeekSolid class="text-primary-600 dark:text-primary-400 h-4 w-4" />
+									</span>
+								{/snippet}
+								<p class="mb-2 text-base font-normal text-gray-500 dark:text-gray-400">
+									{step.description}
+								</p>
+								<div class="flex items-center gap-4 text-sm font-semibold text-blue-700">
+									<button
+										onclick={() => downloadFile(summary.base_file_path)}
+										class="cursor-pointer">Original File</button
+									>
+									<button onclick={() => downloadFile(step.file_path)} class="cursor-pointer"
+										>Final File</button
+									>
+								</div>
+							</TimelineItem>
+						{:else}
+							<p class="text-gray-500">No data available</p>
+						{/each}
+					{/if}
 				</Timeline>
 			</SidebarGroup>
 		</SidebarWrapper>
