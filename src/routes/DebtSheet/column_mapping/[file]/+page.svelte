@@ -377,14 +377,16 @@
 						{/each}
 					</TableBody>
 				</Table>
-				<Button
-					color="dark"
-					class="bg-dark-100 ml-[92%] mt-16 h-[38px] w-[144px] text-nowrap"
-					onclick={saveColumnMappings}
-					disabled={unmappedMandatoryCount > 0}
-				>
-					Confirm Mapping
-				</Button>
+				<div class="flex w-full items-center justify-end py-10">
+					<Button
+						color="dark"
+						class="bg-dark-100 ml-[92%] mt-16 h-[38px] w-[144px] text-nowrap"
+						onclick={saveColumnMappings}
+						disabled={unmappedMandatoryCount > 0}
+					>
+						Confirm Mapping
+					</Button>
+				</div>
 			{/if}
 		</div>
 	</div>

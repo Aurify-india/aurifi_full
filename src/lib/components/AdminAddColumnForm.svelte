@@ -57,7 +57,6 @@
 	let assetClassFetchError = $state<string | null>(null);
 
 	const dataTypeOptions = [
-		{ value: 'currency', name: 'currency' },
 		{ value: 'string', name: 'string' },
 		{ value: 'number', name: 'number' },
 		{ value: 'date', name: 'date' },
