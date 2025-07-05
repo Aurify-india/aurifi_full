@@ -350,6 +350,9 @@
 															: ''}"
 													>
 														{suggestion.column_name}
+														{#if systemColumns.find((col) => col.column_name === suggestion.column_name)?.general_mandatory}
+															<span class="text-red-500">*</span>
+														{/if}
 													</li>
 												{/each}
 											</ul>

@@ -92,15 +92,17 @@
 				<h2>File Not Found!</h2>
 			{/if}
 		</div>
-		<Button
-			color="dark"
-			class="bg-dark-100 float-right m-4 h-[38px] w-[144px]"
-			onclick={() => {
-				redirectToColumnMapping();
-			}}
-			disabled={!!errorMessage}
-		>
-			Fix Headers
-		</Button>
+		<div class="flex w-full items-center justify-end">
+			<Button
+				color="dark"
+				class="bg-dark-100 float-right m-4 h-[38px] w-[144px]"
+				onclick={() => {
+					redirectToColumnMapping();
+				}}
+				disabled={!!errorMessage}
+			>
+				Fix Headers
+			</Button>
+		</div>
 	</div>
 </div>
