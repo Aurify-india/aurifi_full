@@ -4282,12 +4282,10 @@ def get_gpt_column_mapping(transaction_id):
             "uploaded_columns": uploaded_columns
         }
 
-        print(input_data)  # Debugging output to check the structure
-
         # Send to GPT assistant
         from app.utils.column_mapping import send_to_openai_assistant
         gpt_response = send_to_openai_assistant(input_data)
-
+        print(gpt_response)  # Debugging line to see the raw response
         # After you get gpt_response from send_to_openai_assistant
         if gpt_response.get("status") == "success" and "response" in gpt_response:
             try:
