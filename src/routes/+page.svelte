@@ -351,11 +351,9 @@
 								<TableBodyCell colspan={1}></TableBodyCell>
 								<TableBodyCell
 									>{#if !items.is_processing_done}
-										<span class=" flex justify-end font-medium text-blue-600"
-											><button onclick={() => navigateToNextStep(items._id, items.name)}
-												>Process File ></button
-											></span
-										>
+										<span class=" flex justify-end font-medium text-blue-600">
+											<button onclick={() => navigateToNextStep(items._id, items.name)}>Process This File ></button>
+										</span
 									{:else}<span class=" flex justify-end font-medium text-blue-600">Processed</span>
 									{/if}</TableBodyCell
 								>
