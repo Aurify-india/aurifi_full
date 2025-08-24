@@ -1,0 +1,12 @@
+[submodule "Aurifi_backend"]
+	path = Aurifi_backend
+	url = https://github.com/Aurify-india/Aurifi_backend.git
+	branch = main
+[submodule "aurifi_frontend"]
+	path = aurifi_frontend
+	url = https://github.com/Aurify-india/aurifi_frontend.git
+	branch = master
+[submodule "aurifi_deployment"]
+	path = aurifi_deployment
+	url = https://github.com/Aurify-india/aurifi_deployment.git
+	branch = main
