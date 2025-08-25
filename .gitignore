@@ -1,0 +1,7 @@
+
+# ignore any key files
+*key
+*.pub
+*.pem
+*.ppk
+
